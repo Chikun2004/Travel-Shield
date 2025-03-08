@@ -345,7 +345,7 @@ Check the API status at [status.travelshield.com](https://status.travelshield.co
 ## Support
 
 - Email: api-support@travelshield.com
-- API Issues: [GitHub Issues](https://github.com/adityayadav71/travelshield/issues)
+- API Issues: [GitHub Issues](https://github.com/Chikun2004/travelshield/issues)
 - Documentation: [docs.travelshield.com/api](https://docs.travelshield.com/api)
 
 ## Changelog
