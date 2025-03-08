@@ -33,8 +33,17 @@ app.use(security.xss);
 app.use(security.hpp);
 app.use(security.customHeaders);
 
+// CORS configuration
+app.use(cors({
+  origin: process.env.NODE_ENV === 'production' 
+    ? process.env.FRONTEND_URL 
+    : 'http://localhost:5173', // Default Vite development port
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
+
 // Basic middleware
-app.use(cors(security.corsOptions));
 app.use(express.json({ limit: config.upload.maxSize }));
 app.use(express.urlencoded({ extended: true, limit: config.upload.maxSize }));
 
